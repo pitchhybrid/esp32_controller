@@ -2,8 +2,12 @@
 
 #include "led.hpp"
 #include "button.hpp"
+#include "tone.hpp"
+
 Led led(2);
 Button button(2);
+Tone t(2);
+
 void setup() {
   // put your setup code here, to run once:
 }
