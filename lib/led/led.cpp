@@ -1,7 +1,7 @@
 #include "led.hpp"
 
 void Led::iniciar(){
-    pinMode(pin,OUTPUT);
+    Component::iniciar(OUTPUT,false);
     estado = digitalRead(pin);
 };
 

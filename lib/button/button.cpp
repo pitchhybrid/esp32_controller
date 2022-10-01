@@ -2,7 +2,7 @@
 #include "button.hpp"
 
 void Button::iniciar(){
-    pinMode(pin, INPUT_PULLUP);
+    Component::iniciar(INPUT_PULLUP,false);
     estado = HIGH;
 }
 
@@ -11,12 +11,7 @@ bool Button::liberado(){
 }
 
 bool Button::pressionado(){
-    int read = digitalRead(pin);
-    if (read == HIGH)
-    {
-        return true;
-    }
-    return false;
+    return debouce(HIGH);
 }
 
 boolean Button::debouce(int state)

@@ -1,13 +1,12 @@
+
 #include <Arduino.h>
 
-class Led
+#include "component.hpp"
+#pragma once
+class Led: public Component
 {
-private:
-    bool estado;
-    int pin;
-
 public:
-    Led(int _pin) : pin(_pin){};
+    Led(int _pin) :Component(_pin){}
     void iniciar();
     void acender();
     void acender(int ms);

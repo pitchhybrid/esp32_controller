@@ -1,17 +1,15 @@
 #include <Arduino.h>
-
-class Button{
+#include "component.hpp"
+#pragma once
+class Button:public Component{
     private:
-        int pin;
-        bool estado;
-
         const long DEBOUNCE_DELAY = 50;
 
         int lastState = HIGH;
         int lastDebounceTime;
 
     public:
-        Button(int _pin) : pin(_pin){};
+        Button(int _pin) : Component(_pin){};
         void iniciar();
         bool pressionado();
         bool liberado();
