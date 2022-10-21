@@ -1,3 +1,4 @@
+#ifndef BUTTON_H
 #include <Arduino.h>
 #include "component.hpp"
 #pragma once
@@ -15,3 +16,4 @@ class Button:public Component{
         bool liberado();
         bool debouce(int state);
 };
+#endif //BUTTON_H

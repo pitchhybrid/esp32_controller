@@ -1,3 +1,4 @@
+#ifndef TONE_H
 #include "component.hpp"
 
 struct Melody;
@@ -14,4 +15,4 @@ class Tone: public Component {
     template<typename... Args>
     void melody(Melody melody ... );
 };
-
+#endif //TONE_H

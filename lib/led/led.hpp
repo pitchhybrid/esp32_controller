@@ -1,4 +1,4 @@
-
+#ifndef LED_H
 #include <Arduino.h>
 
 #include "component.hpp"
@@ -14,3 +14,4 @@ public:
     void piscar(int v);
      
 };
+#endif //LED_H
