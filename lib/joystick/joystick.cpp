@@ -1,7 +1,8 @@
 #include "joystick.hpp"
 
 void Joystick::iniciar(){
-    pinMode(pin,INPUT_PULLUP);
+    Component::iniciar(INPUT_PULLUP,false);
+    estado = HIGH;
 }
 
 int Joystick::getX(){
@@ -26,6 +27,20 @@ bool Joystick::moving(){
         return true;
     }
     if(getX() < 1600 || getY() < 1600){
+        return true;
+    }
+    return false;
+}
+
+bool Joystick::movingX(){
+    if(getX() > 2000 || getX() < 1600){
+        return true;
+    }
+    return false;
+}
+
+bool Joystick::movingY(){
+    if(getY() > 2000 || getY() < 1600){
         return true;
     }
     return false;

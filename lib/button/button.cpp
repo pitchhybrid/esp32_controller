@@ -7,11 +7,11 @@ void Button::iniciar(){
 }
 
 bool Button::liberado(){
-    return debouce(LOW);
+    return debouce(HIGH);
 }
 
 bool Button::pressionado(){
-    return debouce(HIGH);
+    return debouce(LOW);
 }
 
 boolean Button::debouce(int state)

@@ -6,3 +6,5 @@
 #include "joystick.hpp"
 
 #define BOUND_RATE 115200
+
+void atraso(int ms);

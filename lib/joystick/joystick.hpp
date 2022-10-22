@@ -1,7 +1,7 @@
 #ifndef JOYSTCK_H
 #include "button.hpp"
 #pragma once
-typedef enum Direction{
+enum Direction{
     UP,
     DOWN,
     LEFT,
@@ -23,5 +23,7 @@ class Joystick: public Button {
     int* getPosition();
     void setDeadZone(int deadZone);
     bool moving();
+    bool movingX();
+    bool movingY();
 };
 #endif //JOYSTICK_H
