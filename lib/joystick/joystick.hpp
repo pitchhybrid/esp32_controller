@@ -2,10 +2,10 @@
 #include "button.hpp"
 #pragma once
 enum Direction{
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
+       UP = 2000,
+     DOWN = 1600,
+    RIGHT = 2000,
+     LEFT = 1600
 };
 class Joystick: public Button {
     private:

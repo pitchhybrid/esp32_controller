@@ -14,7 +14,9 @@ int Joystick::getY(){
 }
 
 int* Joystick::getPosition(){
-    int v[2] = {getX(),getY()};
+    int *v = new int[2];
+    v[0] = getX();
+    v[1] = getY();
     return (int*) v;
 }
 
@@ -23,24 +25,24 @@ void Joystick::setDeadZone(int deadZone){
 }
 
 bool Joystick::moving(){
-    if(getX() > 2000 || getY() > 2000){
+    if(getX() > UP || getY() > LEFT){
         return true;
     }
-    if(getX() < 1600 || getY() < 1600){
+    if(getX() < RIGHT || getY() < DOWN){
         return true;
     }
     return false;
 }
 
 bool Joystick::movingX(){
-    if(getX() > 2000 || getX() < 1600){
+    if(getX() > RIGHT || getX() < LEFT){
         return true;
     }
     return false;
 }
 
 bool Joystick::movingY(){
-    if(getY() > 2000 || getY() < 1600){
+    if(getY() > UP || getY() < DOWN){
         return true;
     }
     return false;
