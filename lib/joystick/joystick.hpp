@@ -20,7 +20,7 @@ class Joystick: public Button {
     void iniciar();
     int getX();
     int getY();
-    int* getPosition();
+    std::array<int, 2> getPosition();
     void setDeadZone(int deadZone);
     bool moving();
     bool movingX();

@@ -13,11 +13,11 @@ int Joystick::getY(){
     return analogRead(y);
 }
 
-int* Joystick::getPosition(){
-    int *v = new int[2];
+std::array<int,2> Joystick::getPosition(){
+    std::array<int,2> v;
     v[0] = getX();
     v[1] = getY();
-    return (int*) v;
+    return v;
 }
 
 void Joystick::setDeadZone(int deadZone){

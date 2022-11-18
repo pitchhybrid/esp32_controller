@@ -8,8 +8,8 @@
 #define BOUND_RATE 115200
 
 Button btnAz(26);
-Button btnVer(25);
 Button btnAma(27);
+Button btnVer(25);
 
 Led led(2);
 
